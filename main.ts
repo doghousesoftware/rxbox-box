@@ -2,6 +2,7 @@ input.onButtonPressed(Button.A, function () {
     AMTaken = 1
     PMTaken = 0
     pins.digitalWritePin(DigitalPin.P1, 0)
+    servos.P0.setAngle(0)
 })
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "AM" && AMTaken == 0) {
@@ -31,6 +32,7 @@ input.onButtonPressed(Button.B, function () {
     PMTaken = 1
     AMTaken = 0
     pins.digitalWritePin(DigitalPin.P2, 0)
+    servos.P0.setAngle(0)
 })
 let PMTaken = 0
 let AMTaken = 0
